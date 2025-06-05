@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Admission</title>
+</head>
+<body>
+        <header>
+  <div id="logo">नेपाल मा.वि.</div>
+  <marquee behavior="scroll" direction="left" scrollamount="6">
+    श्री नेपाल नमूना माध्यमिक विद्यालय रोल्पा नगरपालिका-०६ कोट्गाऊँ,रोल्पा
+  </marquee>
+</header>
+
+<nav class="navbar">
+  <div class="nav-links">
+    <a href="Nepal.html">होम पेज</a>
+    <a href="About.html">हाम्रो बारे</a>
+    <a href="Academics.html">शैक्षिक</a>
+    <a href="Admission.html">भर्ना</a>
+    <a href="#">फोटोहरु</a>
+    <a href="Notice.html">सूचनाहरु</a>
+    <a href="#">सम्पर्क</a>
+    <a href="https://see.gov.np/exam/results">नतिजा चेक</a>
+  </div>
+  </nav>
+
+  <section id="admission">
+  <h2>Registration Form</h2>
+  
+ 
+ <form>
+    
+
+    <div class="photo-upload">
+      <div class="photo-preview-container">
+        <img id="preview" class="photo-preview" src="#" alt="Photo Preview" style="display:none;" />
+        <div class="dropdown" id="photo-options">
+          <button type="button" class="dropdown-button" onclick="toggleDropdown()">&#x22EE;</button>
+          <div id="dropdown-content" class="dropdown-content">
+            <button type="button" onclick="replacePhoto()">Replace Photo</button>
+            <button type="button" onclick="deletePhoto()">Delete Photo</button>
+          </div>
+        </div>
+      </div>
+
+      <label for="photo" class="custom-file-label" id="photo-label">Choose Photo</label>
+      <input type="file" id="photo" name="photo" accept="image/*" onchange="previewPhoto(event)" />
+    </div>
+
+   
+
+    <label for="firstName">First Name:</label>
+    <input type="text" id="firstName" name="firstName" placeholder="First Name" required />
+
+    <label for="lastName">Last Name:</label>
+    <input type="text" id="lastName" name="lastName" placeholder="Last Name" required />
+
+    <label for="dob">Date of Birth:</label>
+    <input type="date" id="dob" name="dob" required />
+
+    <label for="gender">Gender:</label>
+    <select id="gender" name="gender" required>
+      <option value="">Select</option>
+      <option value="male">Male</option>
+      <option value="female">Female</option>
+      <option value="other">Other</option>
+    </select>
+
+    <label for="class">Class:</label>
+    <input type="number" id="class" name="class" required />
+
+    <label for="parentName">Parent's Name:</label>
+    <input type="text" id="parentName" name="parentName" placeholder="Parent's Name" required />
+
+    <div class="button-group">
+      <button type="submit">Submit</button>
+      <button type="reset" onclick="resetPreview()">Reset</button>
+    </div>
+  </form>
+
+</section>
+
+<footer>
+  &copy; 2025 Shree Nepal Model Secondary School. Developed By Mohit Budha Magar
+</footer>
+</body>
+</html>
